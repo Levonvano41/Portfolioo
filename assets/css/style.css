@@ -713,7 +713,7 @@ header{
 
 .imagemFundo {
     grid-column: 7/ 11;     
-    grid-row: 3 / 6;
+    grid-row: 2 / 6;
     font-size: 20vw;
     text-align: center;
 }
