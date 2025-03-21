@@ -1974,6 +1974,10 @@ header{
         
     }
 
+    .imagemFundo{
+        display: none !important;
+    }
+
 
     .qtde-page,
     .group-layout {
