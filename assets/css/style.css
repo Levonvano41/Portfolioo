@@ -24,6 +24,7 @@ html {
 /* Add this at the end of the file, after all existing styles */
 
 /* Popup Styles */
+/* Updated Popup Styles with mobile optimization */
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -36,6 +37,8 @@ html {
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(5px);
+    padding: 1rem;
+    overflow-y: auto;
 }
 
 .popup {
@@ -49,6 +52,9 @@ html {
     transform: translateY(-20px);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .popup.active {
@@ -63,6 +69,10 @@ html {
     margin-bottom: 1.5rem;
     padding-bottom: 1rem;
     border-bottom: 2px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1;
 }
 
 .popup-title {
@@ -70,6 +80,8 @@ html {
     font-size: 1.5rem;
     color: #333;
     margin: 0;
+    padding-right: 2rem;
+    word-break: break-word;
 }
 
 .popup-close {
@@ -84,6 +96,9 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    right: 1rem;
+    top: 0.1px;
 }
 
 .popup-close:hover {
@@ -100,12 +115,15 @@ html {
     height: auto;
     border-radius: 8px;
     margin-bottom: 1rem;
+    object-fit: cover;
+    max-height: 300px;
 }
 
 .popup-content h3 {
     font-family: var(--font-tertiary);
     color: #333;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .popup-content p {
@@ -113,12 +131,18 @@ html {
     color: #666;
     line-height: 1.6;
     margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .popup-footer {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
 }
 
 .popup-button {
@@ -135,6 +159,7 @@ html {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .popup-button:hover {
@@ -153,14 +178,65 @@ html {
     background-color: #cc0000;
 }
 
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .popup {
-        width: 95%;
         padding: 1.5rem;
+        width: 95%;
+        margin: 1rem auto;
     }
     
     .popup-title {
         font-size: 1.2rem;
+    }
+
+    .popup-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .popup-content p {
+        font-size: 0.95rem;
+    }
+
+    .popup-button {
+        padding: 0.6em 1.5em;
+        font-size: 12px;
+    }
+
+    .popup-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .popup-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    .popup-header {
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .popup-close {
+        font-size: 1.2rem;
+        right: 0.5rem;
+        top: 0.1px;
+    }
+
+    .popup-content img {
+        max-height: 200px;
+    }
+
+    .popup-footer {
+        padding-top: 0.5rem;
     }
 }
 
@@ -623,7 +699,7 @@ header{
     flex-direction: column;
     text-align: center;
     font-family: var(--font-tertiary);
-    font-size: 14px;
+    font-size: 11px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1305,26 +1381,10 @@ header{
     font-size: 0.9rem;
     font-family: var(--font-tertiary);
 }
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=JetBrains+Mono:wght@100;200;300;400&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
 
 /* variedades =============================== */
-* {
-    margin:0;
-    padding:0;
-    list-style: none;
-    text-decoration: none;
-}
 
-body {
-    background-color: #ffffff;
-    overflow-x:hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
 /* DATA-ANIME ============= */
 [data-anime]{
@@ -1839,9 +1899,7 @@ header{
         justify-content: center;
     }
 
-    .footer-section i {
-        margin-right: 5px;
-    }
+
 }
 
 @media (max-width: 580px) {
