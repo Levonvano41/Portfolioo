@@ -61,6 +61,7 @@ html {
 
 /* Popup Styles */
 /* Updated Popup Styles with mobile optimization */
+
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -79,7 +80,7 @@ html {
 
 .popup {
     background: white;
-    padding: 2rem;
+    padding: 0;
     border-radius: 15px;
     width: 90%;
     max-width: 600px;
@@ -90,7 +91,8 @@ html {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     margin: auto;
     max-height: 90vh;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .popup.active {
@@ -102,13 +104,13 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
+    padding: 1.5rem;
     border-bottom: 2px solid #f0f0f0;
+    background: white;
+    border-radius: 15px 15px 0 0;
     position: sticky;
     top: 0;
-    background: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 .popup-title {
@@ -134,7 +136,7 @@ html {
     justify-content: center;
     position: absolute;
     right: 1rem;
-    top: 0.1px;
+    top: 1rem;
 }
 
 .popup-close:hover {
@@ -143,7 +145,9 @@ html {
 }
 
 .popup-content {
-    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .popup-content img {
@@ -174,11 +178,13 @@ html {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 15px 15px;
     position: sticky;
     bottom: 0;
-    background: white;
-    padding-top: 1rem;
-    border-top: 1px solid #f0f0f0;
+    z-index: 2;
 }
 
 .popup-button {
@@ -214,10 +220,8 @@ html {
     background-color: #cc0000;
 }
 
-/* Mobile Optimization */
 @media (max-width: 768px) {
     .popup {
-        padding: 1.5rem;
         width: 95%;
         margin: 1rem auto;
     }
@@ -252,19 +256,21 @@ html {
 
 @media (max-width: 480px) {
     .popup {
-        padding: 1rem;
         margin: 0.5rem;
     }
 
     .popup-header {
-        padding-bottom: 0.5rem;
-        margin-bottom: 1rem;
+        padding: 1rem;
     }
 
     .popup-close {
         font-size: 1.2rem;
         right: 0.5rem;
-        top: 0.1px;
+        top: 0.5rem;
+    }
+
+    .popup-content {
+        padding: 1rem;
     }
 
     .popup-content img {
@@ -272,16 +278,13 @@ html {
     }
 
     .popup-footer {
-        padding-top: 0.5rem;
+        padding: 1rem;
     }
 }
 
-/* Show popup overlay */
 .popup-overlay.show {
     display: flex;
 }
-
-
 /* DATA-ANIME ============= */
 [data-anime]{
     opacity: 0;
