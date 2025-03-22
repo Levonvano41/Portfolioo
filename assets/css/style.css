@@ -98,6 +98,7 @@ html {
 .popup.active {
     opacity: 1;
     transform: translateY(0);
+    right: 14px;
 }
 
 .popup-header {
