@@ -16,6 +16,7 @@
 <body>
     
     <div class="container">
+
         <div class="hamburguer" id="Close-menu">
             <div class="line" id="line1"></div>
             <div class="line" id="line2"></div>
@@ -25,20 +26,14 @@
 
         <header>
             <div class="img-wrapper">
-                <img src="./assets/images/backgroundimg.jpg" 
-                     srcset="./assets/images/backgroundimg-small.jpg 800w,
-                             ./assets/images/backgroundimg.jpg 1920w"
-                     sizes="100vw"
-                     alt="Background" 
-                     width="1920" 
-                     height="1080" 
-                     loading="eager">
+                <img src="./assets/images/backgroundimg.jpg" alt="">
             </div>
             <div class="banner">    
                 <h1 class="title-style">Levon Vanoyan</h1>  
                 <p>Front-end Developer</p>
-                <a href="#contato" class="ButtonCustom" id="button-banner">LET'S CONNECT</a>
+                <button class="ButtonCustom" ><a href="#contato" style="color: black;">LET’S CONNECT</a></button>
             </div> 
+
         </header>
 
         <aside class="sidebar">
@@ -120,22 +115,14 @@
                     <i class="fa-solid fa-laptop-code"></i>                
                 </div>
         </section>
-
-        <section class="sessao-projetos" id="projetos">
+        <section class="sessao-projetos" id="projetos" >
             <div class="projetos-header">
                 <h1>Projects</h1>
             </div>
             <div class="cards">
                 <div class="card" data-anime="up">
                     <div class="card-img-wrapper">
-                        <img src="./media/1.jpg" 
-                             srcset="./media/1-small.jpg 400w,
-                                     ./media/1.jpg 800w"
-                             sizes="(max-width: 600px) 400px, 800px"
-                             alt="Splendor Homes project screenshot" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy">
+                        <img src="./media/1.jpg" alt="Project 1">
                     </div>
                     <div class="background">
                         <div class="card-info">
@@ -148,19 +135,13 @@
                 </div>
                 <div class="card" data-anime="up">
                     <div class="card-img-wrapper">
-                        <img src="./media/2.avif" 
-                             srcset="./media/2-small.avif 400w,
-                                     ./media/2.avif 800w"
-                             sizes="(max-width: 600px) 400px, 800px"
-                             alt="Health fast project screenshot" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy">
+                        <img src="./media/2.avif" alt="Project 2">
                     </div>
                     <div class="background">
                         <div class="card-info">
                             <h2>Health fast</h2>
-                            <h3>HTML, CSS, JS, TSX</h3>
+                            <h3>HTML, CSS, JS, TSX
+                            </h3>
                             <p>PERFECT PFC BALANCE FOR YOUR HEALTH AND GOALS</p>
                             <button class="ButtonSend"><a href="http://healthfast.tech/index.html">Learn More</a></button>
                         </div>
@@ -168,14 +149,7 @@
                 </div>
                 <div class="card" data-anime="up">
                     <div class="card-img-wrapper">
-                        <img src="./media/4.jpg" 
-                             srcset="./media/4-small.jpg 400w,
-                                     ./media/4.jpg 800w"
-                             sizes="(max-width: 600px) 400px, 800px"
-                             alt="Zufta Tours & Travels project screenshot" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy">
+                        <img src="./media/4.jpg" alt="Project 3">
                     </div>
                     <div class="background">
                         <div class="card-info">
@@ -188,14 +162,7 @@
                 </div>
                 <div class="card" data-anime="up">
                     <div class="card-img-wrapper">
-                        <img src="./media/5.jpg" 
-                             srcset="./media/5-small.jpg 400w,
-                                     ./media/5.jpg 800w"
-                             sizes="(max-width: 600px) 400px, 800px"
-                             alt="Space Travelers Hub project screenshot" 
-                             width="800" 
-                             height="600" 
-                             loading="lazy">
+                        <img src="./media/5.jpg"   alt="Project 4">
                     </div>
                     <div class="background">
                         <div class="card-info">
@@ -206,8 +173,10 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </section>
+
 
         <section class="sessao-certificates" id="certificates">
             <div class="certificates-header">
@@ -215,61 +184,37 @@
             </div>
             <div class="certificates-grid">
                 <div class="certificate-card" data-anime="up">
-                    <a href="https://www.aitc.am/trainings/web-programming">
-                        <div class="certificate-img">
-                            <img src="./assets/images/html.png" 
-                                 srcset="./assets/images/html-small.png 200w,
-                                         ./assets/images/html.png 400w"
-                                 sizes="(max-width: 600px) 200px, 400px"
-                                 alt="HTML & CSS Certificate" 
-                                 width="400" 
-                                 height="300" 
-                                 loading="lazy">
-                        </div>
-                        <div class="certificate-info">
-                            <h3>HTML & CSS Mastery</h3>
-                            <p>AITC</p>
-                            <span class="date">2022-2023</span>
-                        </div>
-                    </a>
+                    <a href="https://www.aitc.am/trainings/web-programming"><div class="certificate-img">
+                        <img src="./assets/images/html.png" alt="HTML & CSS Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>HTML & CSS Mastery</h3>
+                        <p>AITC</p>
+                        <span class="date">2022-2023</span>
+                    </div>
+                </a>
                 </div>
                 <div class="certificate-card" data-anime="up">
-                    <a href="https://www.aitc.am/trainings/react-js">
-                        <div class="certificate-img">
-                            <img src="./media/react.avif" 
-                                 srcset="./media/react-small.avif 200w,
-                                         ./media/react.avif 400w"
-                                 sizes="(max-width: 600px) 200px, 400px"
-                                 alt="React Certificate" 
-                                 width="400" 
-                                 height="300" 
-                                 loading="lazy">
-                        </div>
-                        <div class="certificate-info">
-                            <h3>React Development</h3>
-                            <p>AITC</p>
-                            <span class="date">2023-2024</span>
-                        </div>
-                    </a>
+                   <a href="https://www.aitc.am/trainings/react-js"> <div class="certificate-img">
+                        <img src="./media/react.avif" alt="React Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>React Development</h3>
+                        <p>AITC</p>
+                        <span class="date">2023-2024</span>
+                    </div>
+                </a>
                 </div>
                 <div class="certificate-card" data-anime="up">
-                    <a href="https://www.udemy.com/course/the-complete-javascript-course/?couponCode=ST11MT170325G1">
-                        <div class="certificate-img">
-                            <img src="./assets/images/Udemy.png" 
-                                 srcset="./assets/images/Udemy-small.png 200w,
-                                         ./assets/images/Udemy.png 400w"
-                                 sizes="(max-width: 600px) 200px, 400px"
-                                 alt="JavaScript Certificate" 
-                                 width="400" 
-                                 height="300" 
-                                 loading="lazy">
-                        </div>
-                        <div class="certificate-info">
-                            <h3>JavaScript Advanced</h3>
-                            <p>Udemy</p>
-                            <span class="date">2024</span>
-                        </div>
-                    </a>
+                    <a href="https://www.udemy.com/course/the-complete-javascript-course/?couponCode=ST11MT170325G1"><div class="certificate-img">
+                        <img src="./assets/images/Udemy.png" alt="JavaScript Certificate">
+                    </div>
+                    <div class="certificate-info">
+                        <h3>JavaScript Advanced</h3>
+                        <p>Udemy</p>
+                        <span class="date">2024</span>
+                    </div>
+                </a>
                 </div>
             </div>
         </section>
@@ -289,10 +234,23 @@
                             <label for="user_email" class="field-label">Email</label>
                         </div>
                         <div class="input-group">
-                            <textarea id="Message" name="Message" type="Message" class="field" required></textarea>
+                            <textarea id="message" name="message" type="message" class="field"></textarea>
                             <label for="Message" class="field-label">Message</label>
                         </div>
                         <button class="ButtonCustom" type="submit">Send</button>
+
+                        <script type="text/javascript">
+                            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                event.preventDefault();
+                        
+                                emailjs.sendForm('service_3x6h3mw', 'template_nkogldc', this)
+                                    .then(function() {
+                                        alert('Email sent successfully!');
+                                    }, function(error) {
+                                        alert('Failed to send email: ' + JSON.stringify(error));
+                                    });
+                            });
+                        </script>
                     </form>
                 </div>
             </div>
@@ -336,11 +294,11 @@
     </div>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("lKWAwaGVC83OQw8bp");
-        })();
-    </script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("lKWAwaGVC83OQw8bp");
+    })();
+</script>
     <script src="./script.js"></script>
 </body>
 </html>
