@@ -60,7 +60,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         to_email: 'levonvano41@gmail.com',
         from_name: document.getElementById('user_name').value,
         from_email: document.getElementById('user_email').value,
-        message: document.getElementById('Message').value
+        message: document.getElementById('message').value
     };
 
     // Send email
