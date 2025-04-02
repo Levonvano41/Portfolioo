@@ -20,48 +20,11 @@ html {
     scroll-behavior: smooth;
 }
 
-.banner #button-banner {
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-    animation: moveBanner 1s forwards;
-}
-
-.banner .ButtonCustom {
-    padding: 1.3em 3em;
-    font-family: var(--font-tertiary);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    outline: none;
-    text-decoration: none;
-    display: inline-block;
-}
-   
-.banner .ButtonCustom:hover {
-    background-color: #f50000;
-    box-shadow: 0px 15px 20px rgba(63, 63, 63, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-}
-   
-.banner .ButtonCustom:active {
-    transform: translateY(-1px);
-}
 
 /* Add this at the end of the file, after all existing styles */
 
 /* Popup Styles */
 /* Updated Popup Styles with mobile optimization */
-
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -80,7 +43,7 @@ html {
 
 .popup {
     background: white;
-    padding: 0;
+    padding: 2rem;
     border-radius: 15px;
     width: 90%;
     max-width: 600px;
@@ -91,27 +54,25 @@ html {
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
     margin: auto;
     max-height: 90vh;
-    display: flex;
-    flex-direction: column;
+    overflow-y: auto;
 }
 
 .popup.active {
     opacity: 1;
     transform: translateY(0);
-    right: 14px;
 }
 
 .popup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
     border-bottom: 2px solid #f0f0f0;
-    background: white;
-    border-radius: 15px 15px 0 0;
     position: sticky;
     top: 0;
-    z-index: 2;
+    background: white;
+    z-index: 1;
 }
 
 .popup-title {
@@ -137,7 +98,7 @@ html {
     justify-content: center;
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 0.1px;
 }
 
 .popup-close:hover {
@@ -146,9 +107,7 @@ html {
 }
 
 .popup-content {
-    padding: 1.5rem;
-    overflow-y: auto;
-    flex: 1;
+    margin-bottom: 1.5rem;
 }
 
 .popup-content img {
@@ -179,13 +138,11 @@ html {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    padding: 1.5rem;
-    background: white;
-    border-top: 1px solid #f0f0f0;
-    border-radius: 0 0 15px 15px;
     position: sticky;
     bottom: 0;
-    z-index: 2;
+    background: white;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
 }
 
 .popup-button {
@@ -221,8 +178,10 @@ html {
     background-color: #cc0000;
 }
 
+/* Mobile Optimization */
 @media (max-width: 768px) {
     .popup {
+        padding: 1.5rem;
         width: 95%;
         margin: 1rem auto;
     }
@@ -257,21 +216,19 @@ html {
 
 @media (max-width: 480px) {
     .popup {
+        padding: 1rem;
         margin: 0.5rem;
     }
 
     .popup-header {
-        padding: 1rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     .popup-close {
         font-size: 1.2rem;
         right: 0.5rem;
-        top: 0.5rem;
-    }
-
-    .popup-content {
-        padding: 1rem;
+        top: 0.1px;
     }
 
     .popup-content img {
@@ -279,13 +236,16 @@ html {
     }
 
     .popup-footer {
-        padding: 1rem;
+        padding-top: 0.5rem;
     }
 }
 
+/* Show popup overlay */
 .popup-overlay.show {
     display: flex;
 }
+
+
 /* DATA-ANIME ============= */
 [data-anime]{
     opacity: 0;
@@ -369,6 +329,13 @@ html {
 
 
 /* .ButtonCustom custom */
+
+.button{
+    display: flex;
+    flex-direction: column;
+}
+
+
 .ButtonCustom {
     padding: 1.3em 3em;
     font-family: var(--font-tertiary);
@@ -717,7 +684,7 @@ header{
 
 .imagemFundo {
     grid-column: 7/ 11;     
-    grid-row: 2 / 6;
+    grid-row: 3 / 6;
     font-size: 20vw;
     text-align: center;
 }
@@ -1503,6 +1470,7 @@ header{
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     outline: none;
+    margin-top: 15px;
 }
    
 .ButtonCustom:hover {
@@ -1561,8 +1529,8 @@ header{
     font-size: 2rem;
     color: white;
     text-shadow: .3rem .4rem 2px rgba(0, 0, 0, 0.404);
-    line-height: 3.5rem;
-    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
     animation: fadeInUp 1s ease-out forwards;
 }
 
